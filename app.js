@@ -1,12 +1,13 @@
-// Golbal Variable - No window
+// Modules
+// CommonJs, every file is module(by default)
+// Modules - Encapsulated Code (only share minimum)
+// Modules - Caching (once a module is loaded, it is cached and not loaded again)
+//node uses CommonJS library under the hood to load modules
 
-// __dirname - path to current directory
-// __filename - file name 
-// require - function to use modules
-// module - info about current module
-// process - info about env where the program is being executed
+const names = require('./4-names')
+console.log(names);
+const sayHi = require('./5-utils')
 
-console.log(__dirname)
-setInterval(() => {
-    console.log('hello world')
-}, 1000)
+sayHi('susan')
+sayHi(john)
+sayHi(peter)
